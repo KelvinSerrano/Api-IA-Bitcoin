@@ -35,8 +35,9 @@ def obtener_prediccion():
         # ---------------------------------------------------------
         # 1. OBTENER DATOS (Ejemplo con la API pública de Binance)
         # Necesitamos los últimos 60 días (o los que use tu modelo)
+        # Usamos la api de USA al tener todo en servidor de alla
         # ---------------------------------------------------------
-        url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=60"
+        url = "https://api.binance.us/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=60"
         respuesta = requests.get(url)
         datos_binance = respuesta.json()
 
